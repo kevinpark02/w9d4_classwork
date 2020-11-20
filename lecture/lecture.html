@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Dom</title>
+</head>
+<body>
+    <h2>What is the DOM?</h2>
+    <ul>
+        <li>The document is any web page loaded in the browser. This Document serves as an entry point into the web pages' content, which is represented by the DOM</li>
+        <li>A reference to the Document object exists as a property on the Window (i.e window.document)</li>
+        <li>DOM (Document Object Model) - A web API available for HTML, SVG, and XML documents</li>
+    </ul>
+    <h2>DOM Manipulation and JavaScript</h2>
+    <ul>
+        <li>DOM Manipulation allows us to use plain JavaScript to perform CRUD operations on the objects on our webpage. Any changes are reflected in the display of the document.</li>
+        <li>Different browsers have diff implementations of the DOM, with varying degrees of conformance to the W3C DOM standard, but every web browser uses some document object model to make web pages look nice</li>
+    </ul>
+    <h2>Data Types</h2>
+    <ul>
+        <li>NODE - every object located within a document is a node of some kind</li>
+        <li>ELEMENT - refers to an element or a node of type element returned by a member of the DOM API.</li>
+        <li>NODELIST - A nodeList is an array-like collection of nodes and can be accessed through indexing.</li>
+        <li>HTMLCollection - A HTMLCollection is an array-like collection of elements</li>
+    </ul>
+    <h2>DOM Manipulation Methods</h2>
+    <ul>
+        <li>.geElementById(idString) - returns the HTML element of given ID</li>
+        <li>.getElementByClassName(classString) - returns collection of HTMLElements with the given class</li>
+        <li>.querySelector(selector) - Returns first element of given selector</li>
+        <li>.querySelectorAll(selectors) - Returns NodeList of matches</li>
+        <ul>
+            <li>selectors can be tags(div), classes(.hidden), ids, and combined(h2#TOP>p)</li>
+        </ul>
+    </ul>
+    <h2>DOM Styling Methods</h2>
+    <h3>Inline</h3>
+    <ul>
+        <li>element.style.property = "value" => inline sets property to given value</li>
+        <ul>
+            <li>div.style.display = "none"</li>
+            <li>p.style.fontWeight = "900"</li>
+        </ul>
+    </ul>
+    <h3>Class</h3>
+    <h2>Events and the DOM</h2>
+    <ul>
+        <li>An event can be something the browser does or something a user does</li>
+        <li>Examples</li>
+        <ul>
+            <li>A web page has finished loading</li>
+            <li>An input filed was changed</li>
+            <li>A button was clicked</li>
+        </ul>
+        <li>JavaScript code can react to these evens via even handlers or listenrs installed on DOM elements</li>
+    </ul>
+    <h2>Event Listeners</h2>
+    <ul>
+        <li>There are 3 ways to register event handlers for a DOM element</li>
+        <ul>
+            <li>On an event target element using EventTarget.addEventListener()</li>
+            <li>On a HTML attribute <button onclick="alert('Hello world!')"></button></li>
+            <li>DOM element properties myButton.onclick = function(event) {alert('Hello world')}</li>
+        </ul>
+    </ul>
+    <h3>When using .addEventListener</h3>
+    <ul>
+        <li>Change: an HTML element has been changed</li>
+        <li>Click: The user clicks an HTML element</li>
+        <li>Mouseover: the user moves the mouse over an HTML element</li>
+        <li>Mouseout: The user moves the mouse away from an HTML element</li>
+        <li>keydown: the user pushes a keyboard key</li>
+    </ul>
+    <h3>Directly on an html element</h3>
+    <ul>
+        <li>onchange</li>
+        <li>onclick</li>
+        <li>onmouseover</li>
+        <li>onmouseout</li>
+        <li>...etc</li>
+    </ul>
+</body>
+</html>
